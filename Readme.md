@@ -32,24 +32,24 @@ This project is a **Node.js application containerized with Docker**. It runs a s
 ```bash
 git clone <your-repo-url>
 cd <repo-folder>
+
 2. Build the Docker image
-bash
-Copy code
+
 docker build -t my-node-app .
+
 3. Run the Docker container
-bash
-Copy code
+
 docker run -p 3000:3000 my-node-app
+
 Open your browser at http://localhost:3000 to see the app running.
 
 4. Running in detached mode (optional)
-bash
-Copy code
+
 docker run -d -p 3000:3000 --name my-node-app my-node-app
 docker logs -f my-node-app   # to follow logs
+
 Folder Structure
-arduino
-Copy code
+
 first-demo-starting-setup/
 │   Dockerfile
 │   package.json
@@ -66,13 +66,9 @@ If the server is not accessible in the browser, check Windows Firewall notificat
 
 To see logs of a running container:
 
-bash
-Copy code
 docker logs <container-id-or-name>
 To stop the container:
 
-bash
-Copy code
 docker stop my-node-app
 Notes
 This repository is intended for learning purposes and demonstrates Dockerized Node.js app deployment.
